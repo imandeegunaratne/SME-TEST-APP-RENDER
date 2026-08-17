@@ -1,0 +1,87 @@
+# ==========================================
+# SME-TEST-APP-RENDER Gitignore
+# Render-prepared deployment repository
+# ==========================================
+
+# --- Environment & Secrets (CRITICAL) ---
+.env
+.env.*
+!.env.example
+*.local
+secrets.json
+
+# --- Python & Django ---
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+venv/
+.venv/
+env/
+ENV/
+db.sqlite3
+db.sqlite3-journal
+backend/media/
+backend/staticfiles/
+backend/staticfiles_dev/
+backend/frontend_static/
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Node & Frontend ---
+frontend/node_modules/
+frontend/dist/
+dist/
+dist-ssr/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+pnpm-debug.log*
+
+# --- Editors & IDEs ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+
+# --- OS Specific ---
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+
+# --- Python Build/Distribution ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Docker ---
+# Note: Removed docker-compose files from this repo - they stay in original only
+desktop.ini
+
+# --- Other Junk ---
+.cache/
+tmp/
