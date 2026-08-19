@@ -3,7 +3,7 @@ services:
   # Django Backend Web Service
   # ============================================================================
   - type: web
-    name: sme-backend
+    name: sme-backend-ohio
     runtime: python
     region: ohio
     plan: free
