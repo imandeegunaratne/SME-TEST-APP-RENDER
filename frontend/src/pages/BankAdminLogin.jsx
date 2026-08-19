@@ -51,6 +51,10 @@ export default function BankAdminLogin() {
     setErr("");
     setLoading(true);
 
+    const submittedForm = new FormData(e.currentTarget);
+    const username = String(submittedForm.get("username") || "").trim();
+    const password = String(submittedForm.get("password") || "");
+
     localStorage.removeItem("token");
     localStorage.removeItem("role");
     localStorage.removeItem("username");
@@ -63,8 +67,8 @@ export default function BankAdminLogin() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          username: form.username.trim(),
-          password: form.password,
+          username,
+          password,
         }),
       });
 
