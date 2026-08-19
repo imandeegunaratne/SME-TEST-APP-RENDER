@@ -13,6 +13,7 @@ python manage.py collectstatic --noinput
 
 echo "Running database migrations..."
 python manage.py migrate --noinput
+python manage.py seed_weights
 
 python manage.py shell <<'PY'
 import os
