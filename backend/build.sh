@@ -1,6 +1,6 @@
 #!/bin/bash
 # Build script for Render deployment
-# Performs production build steps: dependencies, static files, migrations
+# Performs production build steps: dependencies and static files
 
 set -o errexit
 
@@ -10,8 +10,5 @@ pip install -r requirements.txt
 
 echo "Collecting static files..."
 python manage.py collectstatic --noinput
-
-echo "Running database migrations..."
-python manage.py migrate
 
 echo "Build complete!"
